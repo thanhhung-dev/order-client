@@ -16,6 +16,9 @@ import {
   Settings2,
   ShoppingCart,
   SquareTerminal,
+  Package,
+  Table2,
+  ClipboardList,
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
@@ -31,6 +34,8 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import { title } from "process"
+import { url } from "inspector"
 
 const data = {
   user: {
@@ -40,19 +45,23 @@ const data = {
   },
   navMain: [
     {
-      title: "Product List",
+      title: "Product Management",
       url: "#",
-      icon: List,
+      icon: Package,
       isActive: true,
       items: [
         {
-          title: "Category",
+          title: "Categories",
           url: "/category",
         },
         {
-          title: "Product List",
-          url: "#",
+          title: "Products",
+          url: "/product",
         },
+        {
+          title: "Table",
+          url: "/table"
+        }
       ],
     },
   ],
@@ -76,7 +85,7 @@ const data = {
     },
     {
       name: "Orders",
-      url: "#",
+      url: "/order",
       icon: ShoppingCart,
     },
   ],
